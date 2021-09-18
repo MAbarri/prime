@@ -1,8 +1,10 @@
 import {Injectable} from '@angular/core';
 
-const marketPlaceArtifacts = require('../../../build/contracts/MarketPlace.json');
+const ManagerArtifacts = require('../../../build/contracts/HeroPrimeManager.json');
+const TokenArtifacts = require('../../../build/contracts/HeroPrimeToken.json');
+const NFTArtifacts = require('../../../build/contracts/HeroPrimeNFT.json');
 
-declare var require;
+declare var require: any;
 const Web3 = require('web3');
 declare let window: any;
 
@@ -47,37 +49,65 @@ export class Web3Service {
     });
   }
 
-  public getContract() {
+  public getManagerContract() {
     return new Promise((resolve) => {
       const web3 = window.web3;
       let networkId;
       web3.eth.net.getId()
         .then((netId: any) => {
           networkId = netId;
-          const abi = marketPlaceArtifacts.abi;
-          const networkAddress = marketPlaceArtifacts.networks[networkId].address;
-          const marketplace = new web3.eth.Contract(abi, networkAddress);
-          resolve(marketplace);
+          const abi = ManagerArtifacts.abi;
+          const networkAddress = ManagerArtifacts.networks[networkId].address;
+          const artifact = new web3.eth.Contract(abi, networkAddress);
+          resolve(artifact);
+        });
+    });
+  }
+  public getTokenContract() {
+    return new Promise((resolve) => {
+      const web3 = window.web3;
+      let networkId;
+      web3.eth.net.getId()
+        .then((netId: any) => {
+          networkId = netId;
+          const abi = TokenArtifacts.abi;
+          const networkAddress = TokenArtifacts.networks[networkId].address;
+          const artifact = new web3.eth.Contract(abi, networkAddress);
+          resolve(artifact);
+        });
+    });
+  }
+  public getNFTContract() {
+    return new Promise((resolve) => {
+      const web3 = window.web3;
+      let networkId;
+      web3.eth.net.getId()
+        .then((netId: any) => {
+          networkId = netId;
+          const abi = NFTArtifacts.abi;
+          const networkAddress = NFTArtifacts.networks[networkId].address;
+          const artifact = new web3.eth.Contract(abi, networkAddress);
+          resolve(artifact);
         });
     });
   }
 
-  public convertPriceToEther(price) {
+  public convertPriceToEther(price: any) {
     const web3 = window.web3;
     return web3.utils.toWei(price.toString(), 'Ether');
   }
 
-  public convertEtherToPrice(price) {
+  public convertEtherToPrice(price: any) {
     const web3 = window.web3;
     return web3.utils.fromWei(price.toString(), 'Ether');
   }
 
-  public getEtherBalance(account) {
+  public getEtherBalance(account: any) {
 
     return new Promise((resolve) => {
       const web3 = window.web3;
       const balance = web3.eth.getBalance(account)
-        .then(ba => {
+        .then((ba: any) => {
           resolve(web3.utils.fromWei(ba, 'Ether'));
         });
     });

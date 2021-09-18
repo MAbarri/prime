@@ -1,0 +1,14 @@
+<div style="width: 800px; margin: auto">
+    <h4>My Heroes : ({{myHeroes ? myHeroes.length : 0}})</h4>
+    <div style="width: 200px; display: inline-block;    padding: 10px; border: solid black 2px; border-radius: 8px;" *ngFor="let hero of myHeroes">
+        <p>Id : {{hero['id']}}<p>
+        <p>DNA : {{hero['dna']}}<p>
+        <p>Element : {{hero['element']}}<p>
+        <p>Experience : {{hero['exp']}} Exp</p>
+    </div>
+
+</div>
+<div style="width: 600px; margin: auto;">
+    <h4>Available Rolls : ({{rollsBalance}})</h4>
+    <button *ngIf="rollsBalance>0" (click)="rollForHero()" >Roll For Hero</button>
+</div>

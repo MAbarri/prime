@@ -1,0 +1,10 @@
+
+<div style="width: 600px; margin: auto;">
+    <h4>Available Rolls : ({{rollsBalance}})</h4>
+</div>
+<div style="width: 600px; margin: auto;">
+    <h4>Buy Hero Prime Rolls :</h4>
+    <input *ngIf="managerApproved" [(ngModel)]="rollsamount" type="number">
+    <button *ngIf="!managerApproved" (click)="approveManager()" >Approve</button>
+    <button *ngIf="managerApproved" (click)="buyRolls()" >Buy Rolls</button>
+</div>

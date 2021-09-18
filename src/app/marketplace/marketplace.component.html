@@ -1,0 +1,37 @@
+
+<div *ngIf="!nftApproved">
+    <h4>WARNING: Your need to approve marketplace to manage your NFTs before using it</h4>
+    <button (click)="approveNFTmarketplace()" >Approve Marketplace on NFTs</button>
+</div>
+<div *ngIf="!nftApprovedonToken">
+    <h4>WARNING: Your need to approve marketplace to manage your Tokens before using it</h4>
+    <button (click)="approveNFTmarketplaceToken()" >Approve Marketplace on Tokens</button>
+</div>
+<div *ngIf="nftApproved && nftApprovedonToken">
+    <div style="width: 800px; margin: auto">
+        <h4>My Heroes : ({{myHeroes ? myHeroes.length : 0}})</h4>
+        <div style="width: 200px; display: inline-block;    padding: 10px; border: solid black 2px; border-radius: 8px;" *ngFor="let hero of myHeroes">
+            <p>Id : {{hero['id']}}<p>
+            <p>DNA : {{hero['dna']}}<p>
+            <p>Element : {{hero['element']}}<p>
+            <p>Experience : {{hero['exp']}} Exp</p>
+            Sell Token For : <input [(ngModel)]="sellPrice[hero['id']]" type="number">
+            <button (click)="placeOrder(hero['id'])" >Sell</button>
+        </div>
+    
+    </div>
+    <div style="width: 800px; margin: auto;">
+        <h4>Tokens For Sale : ({{marketLength}})</h4>
+        
+        <div style="width: 200px; display: inline-block;    padding: 10px; border: solid black 2px; border-radius: 8px;" *ngFor="let hero of itemsForSale">
+            <p>Id : {{hero['id']}}<p>
+            <p>DNA : {{hero['dna']}}<p>
+            <p>Element : {{hero['element']}}<p>
+            <p>Experience : {{hero['exp']}} Exp</p>
+            <p>Price : {{hero['price'] | tokenDecimals}} HPK</p>
+            <button (click)="cancelOrder(hero['id'])" *ngIf="hero['owner'] == accountNumber" >Cancel Sell</button>
+            <button (click)="fillOrder(hero['id'])"  *ngIf="hero['owner'] != accountNumber">Buy</button>
+        </div>
+    </div>
+
+</div>
