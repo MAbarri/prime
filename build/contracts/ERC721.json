@@ -12712,7 +12712,7 @@
     "absolutePath": "project:/contracts/ERC721.sol",
     "exportedSymbols": {
       "Context": [
-        4395
+        4506
       ],
       "ERC721": [
         2419
@@ -12724,13 +12724,13 @@
         1078
       ],
       "IERC721": [
-        4236
+        4343
       ],
       "Ownable": [
-        4704
+        4815
       ],
       "SafeMath": [
-        4588
+        4699
       ]
     },
     "id": 2420,
@@ -12753,7 +12753,7 @@
         "id": 1583,
         "nodeType": "ImportDirective",
         "scope": 2420,
-        "sourceUnit": 4705,
+        "sourceUnit": 4816,
         "src": "27:21:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -12764,7 +12764,7 @@
         "id": 1584,
         "nodeType": "ImportDirective",
         "scope": 2420,
-        "sourceUnit": 4237,
+        "sourceUnit": 4344,
         "src": "50:23:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -12799,7 +12799,7 @@
               "id": 1588,
               "name": "Context",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 4395,
+              "referencedDeclaration": 4506,
               "src": "361:7:3"
             },
             "id": 1589,
@@ -12811,7 +12811,7 @@
               "id": 1590,
               "name": "IERC721",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 4236,
+              "referencedDeclaration": 4343,
               "src": "370:7:3"
             },
             "id": 1591,
@@ -12820,8 +12820,8 @@
           }
         ],
         "contractDependencies": [
-          4236,
-          4395
+          4343,
+          4506
         ],
         "contractKind": "contract",
         "documentation": {
@@ -12834,8 +12834,8 @@
         "id": 2419,
         "linearizedBaseContracts": [
           2419,
-          4236,
-          4395
+          4343,
+          4506
         ],
         "name": "ERC721",
         "nodeType": "ContractDefinition",
@@ -12846,7 +12846,7 @@
               "id": 1592,
               "name": "SafeMath",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 4588,
+              "referencedDeclaration": 4699,
               "src": "393:8:3"
             },
             "nodeType": "UsingForDirective",
@@ -13417,7 +13417,7 @@
           },
           {
             "baseFunctions": [
-              4161
+              4268
             ],
             "body": {
               "id": 1672,
@@ -13750,7 +13750,7 @@
           },
           {
             "baseFunctions": [
-              4169
+              4276
             ],
             "body": {
               "id": 1688,
@@ -15373,7 +15373,7 @@
           },
           {
             "baseFunctions": [
-              4197
+              4304
             ],
             "body": {
               "id": 1852,
@@ -15617,7 +15617,7 @@
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4383,
+                              "referencedDeclaration": 4494,
                               "src": "4692:10:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -15683,7 +15683,7 @@
                                 "name": "_msgSender",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4383,
+                                "referencedDeclaration": 4494,
                                 "src": "4741:10:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -15974,7 +15974,7 @@
           },
           {
             "baseFunctions": [
-              4205
+              4312
             ],
             "body": {
               "id": 1873,
@@ -16232,7 +16232,7 @@
           },
           {
             "baseFunctions": [
-              4213
+              4320
             ],
             "body": {
               "id": 1907,
@@ -16274,7 +16274,7 @@
                             "name": "_msgSender",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 4383,
+                            "referencedDeclaration": 4494,
                             "src": "5473:10:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -16393,7 +16393,7 @@
                             "name": "_msgSender",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 4383,
+                            "referencedDeclaration": 4494,
                             "src": "5547:10:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -16485,7 +16485,7 @@
                           "name": "_msgSender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4383,
+                          "referencedDeclaration": 4494,
                           "src": "5612:10:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -16551,7 +16551,7 @@
                       "name": "ApprovalForAll",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4153,
+                      "referencedDeclaration": 4260,
                       "src": "5597:14:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_bool_$returns$__$",
@@ -16672,7 +16672,7 @@
           },
           {
             "baseFunctions": [
-              4223
+              4330
             ],
             "body": {
               "id": 1925,
@@ -16870,7 +16870,7 @@
           },
           {
             "baseFunctions": [
-              4189
+              4296
             ],
             "body": {
               "id": 1952,
@@ -16890,7 +16890,7 @@
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4383,
+                              "referencedDeclaration": 4494,
                               "src": "6233:10:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -17230,7 +17230,7 @@
           },
           {
             "baseFunctions": [
-              4179
+              4286
             ],
             "body": {
               "id": 1971,
@@ -17467,7 +17467,7 @@
           },
           {
             "baseFunctions": [
-              4235
+              4342
             ],
             "body": {
               "id": 2001,
@@ -17487,7 +17487,7 @@
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4383,
+                              "referencedDeclaration": 4494,
                               "src": "6916:10:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -19906,7 +19906,7 @@
                       "name": "Transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4135,
+                      "referencedDeclaration": 4242,
                       "src": "10742:8:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -20840,7 +20840,7 @@
                       "name": "Transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4135,
+                      "referencedDeclaration": 4242,
                       "src": "11513:8:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -21616,7 +21616,7 @@
                       "name": "Transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4135,
+                      "referencedDeclaration": 4242,
                       "src": "12541:8:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -22318,7 +22318,7 @@
                       "name": "Approval",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4144,
+                      "referencedDeclaration": 4251,
                       "src": "13578:8:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -23175,7 +23175,7 @@
     "absolutePath": "project:/contracts/ERC721.sol",
     "exportedSymbols": {
       "Context": [
-        4395
+        4506
       ],
       "ERC721": [
         2419
@@ -23187,13 +23187,13 @@
         1078
       ],
       "IERC721": [
-        4236
+        4343
       ],
       "Ownable": [
-        4704
+        4815
       ],
       "SafeMath": [
-        4588
+        4699
       ]
     },
     "id": 2420,
@@ -23216,7 +23216,7 @@
         "id": 1583,
         "nodeType": "ImportDirective",
         "scope": 2420,
-        "sourceUnit": 4705,
+        "sourceUnit": 4816,
         "src": "27:21:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -23227,7 +23227,7 @@
         "id": 1584,
         "nodeType": "ImportDirective",
         "scope": 2420,
-        "sourceUnit": 4237,
+        "sourceUnit": 4344,
         "src": "50:23:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -23262,7 +23262,7 @@
               "id": 1588,
               "name": "Context",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 4395,
+              "referencedDeclaration": 4506,
               "src": "361:7:3"
             },
             "id": 1589,
@@ -23274,7 +23274,7 @@
               "id": 1590,
               "name": "IERC721",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 4236,
+              "referencedDeclaration": 4343,
               "src": "370:7:3"
             },
             "id": 1591,
@@ -23283,8 +23283,8 @@
           }
         ],
         "contractDependencies": [
-          4236,
-          4395
+          4343,
+          4506
         ],
         "contractKind": "contract",
         "documentation": {
@@ -23297,8 +23297,8 @@
         "id": 2419,
         "linearizedBaseContracts": [
           2419,
-          4236,
-          4395
+          4343,
+          4506
         ],
         "name": "ERC721",
         "nodeType": "ContractDefinition",
@@ -23309,7 +23309,7 @@
               "id": 1592,
               "name": "SafeMath",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 4588,
+              "referencedDeclaration": 4699,
               "src": "393:8:3"
             },
             "nodeType": "UsingForDirective",
@@ -23880,7 +23880,7 @@
           },
           {
             "baseFunctions": [
-              4161
+              4268
             ],
             "body": {
               "id": 1672,
@@ -24213,7 +24213,7 @@
           },
           {
             "baseFunctions": [
-              4169
+              4276
             ],
             "body": {
               "id": 1688,
@@ -25836,7 +25836,7 @@
           },
           {
             "baseFunctions": [
-              4197
+              4304
             ],
             "body": {
               "id": 1852,
@@ -26080,7 +26080,7 @@
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4383,
+                              "referencedDeclaration": 4494,
                               "src": "4692:10:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -26146,7 +26146,7 @@
                                 "name": "_msgSender",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4383,
+                                "referencedDeclaration": 4494,
                                 "src": "4741:10:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -26437,7 +26437,7 @@
           },
           {
             "baseFunctions": [
-              4205
+              4312
             ],
             "body": {
               "id": 1873,
@@ -26695,7 +26695,7 @@
           },
           {
             "baseFunctions": [
-              4213
+              4320
             ],
             "body": {
               "id": 1907,
@@ -26737,7 +26737,7 @@
                             "name": "_msgSender",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 4383,
+                            "referencedDeclaration": 4494,
                             "src": "5473:10:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -26856,7 +26856,7 @@
                             "name": "_msgSender",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 4383,
+                            "referencedDeclaration": 4494,
                             "src": "5547:10:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -26948,7 +26948,7 @@
                           "name": "_msgSender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4383,
+                          "referencedDeclaration": 4494,
                           "src": "5612:10:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -27014,7 +27014,7 @@
                       "name": "ApprovalForAll",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4153,
+                      "referencedDeclaration": 4260,
                       "src": "5597:14:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_bool_$returns$__$",
@@ -27135,7 +27135,7 @@
           },
           {
             "baseFunctions": [
-              4223
+              4330
             ],
             "body": {
               "id": 1925,
@@ -27333,7 +27333,7 @@
           },
           {
             "baseFunctions": [
-              4189
+              4296
             ],
             "body": {
               "id": 1952,
@@ -27353,7 +27353,7 @@
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4383,
+                              "referencedDeclaration": 4494,
                               "src": "6233:10:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -27693,7 +27693,7 @@
           },
           {
             "baseFunctions": [
-              4179
+              4286
             ],
             "body": {
               "id": 1971,
@@ -27930,7 +27930,7 @@
           },
           {
             "baseFunctions": [
-              4235
+              4342
             ],
             "body": {
               "id": 2001,
@@ -27950,7 +27950,7 @@
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4383,
+                              "referencedDeclaration": 4494,
                               "src": "6916:10:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -30369,7 +30369,7 @@
                       "name": "Transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4135,
+                      "referencedDeclaration": 4242,
                       "src": "10742:8:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -31303,7 +31303,7 @@
                       "name": "Transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4135,
+                      "referencedDeclaration": 4242,
                       "src": "11513:8:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -32079,7 +32079,7 @@
                       "name": "Transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4135,
+                      "referencedDeclaration": 4242,
                       "src": "12541:8:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -32781,7 +32781,7 @@
                       "name": "Approval",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4144,
+                      "referencedDeclaration": 4251,
                       "src": "13578:8:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -33640,7 +33640,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-09-18T15:55:50.407Z",
+  "updatedAt": "2021-09-22T22:19:21.237Z",
   "devdoc": {
     "details": "see https://eips.ethereum.org/EIPS/eip-721",
     "kind": "dev",

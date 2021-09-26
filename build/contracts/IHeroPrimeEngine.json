@@ -45,15 +45,15 @@
     "absolutePath": "project:/contracts/IHeroPrimeEngine.sol",
     "exportedSymbols": {
       "IHeroPrimeEngine": [
-        4250
+        4357
       ]
     },
-    "id": 4251,
+    "id": 4358,
     "license": "UNLICENSED",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4238,
+        "id": 4345,
         "literals": [
           "solidity",
           "^",
@@ -69,32 +69,32 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 4250,
+        "id": 4357,
         "linearizedBaseContracts": [
-          4250
+          4357
         ],
         "name": "IHeroPrimeEngine",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "functionSelector": "c28ad2d3",
-            "id": 4249,
+            "id": 4356,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "battle",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4245,
+              "id": 4352,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4240,
+                  "id": 4347,
                   "mutability": "mutable",
                   "name": "sender",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4249,
+                  "scope": 4356,
                   "src": "123:14:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -103,7 +103,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 4239,
+                    "id": 4346,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "123:7:10",
@@ -117,11 +117,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 4242,
+                  "id": 4349,
                   "mutability": "mutable",
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4249,
+                  "scope": 4356,
                   "src": "139:16:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -130,7 +130,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 4241,
+                    "id": 4348,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "139:7:10",
@@ -143,11 +143,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 4244,
+                  "id": 4351,
                   "mutability": "mutable",
                   "name": "_monsterLevelIndex",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4249,
+                  "scope": 4356,
                   "src": "157:23:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -156,7 +156,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 4243,
+                    "id": 4350,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "157:4:10",
@@ -171,16 +171,16 @@
               "src": "122:59:10"
             },
             "returnParameters": {
-              "id": 4248,
+              "id": 4355,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4247,
+                  "id": 4354,
                   "mutability": "mutable",
                   "name": "result",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4249,
+                  "scope": 4356,
                   "src": "199:11:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -189,7 +189,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 4246,
+                    "id": 4353,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "199:4:10",
@@ -203,14 +203,14 @@
               ],
               "src": "198:13:10"
             },
-            "scope": 4250,
+            "scope": 4357,
             "src": "107:105:10",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 4251,
+        "scope": 4358,
         "src": "67:148:10"
       }
     ],
@@ -220,15 +220,15 @@
     "absolutePath": "project:/contracts/IHeroPrimeEngine.sol",
     "exportedSymbols": {
       "IHeroPrimeEngine": [
-        4250
+        4357
       ]
     },
-    "id": 4251,
+    "id": 4358,
     "license": "UNLICENSED",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4238,
+        "id": 4345,
         "literals": [
           "solidity",
           "^",
@@ -244,32 +244,32 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 4250,
+        "id": 4357,
         "linearizedBaseContracts": [
-          4250
+          4357
         ],
         "name": "IHeroPrimeEngine",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "functionSelector": "c28ad2d3",
-            "id": 4249,
+            "id": 4356,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "battle",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4245,
+              "id": 4352,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4240,
+                  "id": 4347,
                   "mutability": "mutable",
                   "name": "sender",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4249,
+                  "scope": 4356,
                   "src": "123:14:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -278,7 +278,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 4239,
+                    "id": 4346,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "123:7:10",
@@ -292,11 +292,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 4242,
+                  "id": 4349,
                   "mutability": "mutable",
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4249,
+                  "scope": 4356,
                   "src": "139:16:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -305,7 +305,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 4241,
+                    "id": 4348,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "139:7:10",
@@ -318,11 +318,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 4244,
+                  "id": 4351,
                   "mutability": "mutable",
                   "name": "_monsterLevelIndex",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4249,
+                  "scope": 4356,
                   "src": "157:23:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -331,7 +331,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 4243,
+                    "id": 4350,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "157:4:10",
@@ -346,16 +346,16 @@
               "src": "122:59:10"
             },
             "returnParameters": {
-              "id": 4248,
+              "id": 4355,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4247,
+                  "id": 4354,
                   "mutability": "mutable",
                   "name": "result",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4249,
+                  "scope": 4356,
                   "src": "199:11:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -364,7 +364,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 4246,
+                    "id": 4353,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "199:4:10",
@@ -378,14 +378,14 @@
               ],
               "src": "198:13:10"
             },
-            "scope": 4250,
+            "scope": 4357,
             "src": "107:105:10",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 4251,
+        "scope": 4358,
         "src": "67:148:10"
       }
     ],
@@ -397,7 +397,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-09-18T15:55:50.597Z",
+  "updatedAt": "2021-09-22T22:19:21.504Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

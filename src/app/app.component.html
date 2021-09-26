@@ -1,12 +1,15 @@
 <div  style="padding: 80px">
-<div>
-  <h1>Hero Prime Website</h1>
-</div>
-<button routerLink="/admin">admin</button>
-<button routerLink="/arena">Arena</button>
-<button routerLink="/marketplace">Marketplace</button>
-<button routerLink="/shop">Shop</button>
-<button routerLink="/inventory">Inventory</button>
-<span style="float: right">Balance: {{ tokenBalance | tokenDecimals }}</span>
+  <div>
+    <h1>Hero Prime Website</h1>
+  </div>
+  <div *ngIf="isAlive">
+    <button routerLink="/admin">admin</button>
+    <button routerLink="/arena">Arena</button>
+    <button routerLink="/marketplace">Marketplace</button>
+    <button routerLink="/shop">Shop</button>
+    <button routerLink="/inventory">Inventory</button>
+    <span style="float: right">Balance: {{ tokenBalance | tokenDecimals }}</span>
+  </div>
+
   <router-outlet></router-outlet>
 </div>

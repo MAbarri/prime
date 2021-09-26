@@ -12,8 +12,12 @@ declare let window: any;
   providedIn: 'root'
 })
 export class Web3Service {
+  fromUtf8(arg0: string): any {
+    throw new Error('Method not implemented.');
+  }
 
   private messageResult: any;
+  personal: any;
 
   constructor() {
   }
@@ -112,6 +116,20 @@ export class Web3Service {
         });
     });
 
+  }
+
+  public signNounce(address, nonce) : any {
+    const web3 = window.web3;
+    return new Promise((resolve, reject) =>
+      web3.eth.personal.sign(
+        web3.utils.fromUtf8("I am signing my one-time nonce:" + nonce),
+        address,
+        (err, signature) => {
+          if (err) return reject(err);
+          return resolve({ address, signature });
+        }
+      )
+    );
   }
 
 }

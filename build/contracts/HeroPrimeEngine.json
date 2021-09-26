@@ -7712,22 +7712,22 @@
     "absolutePath": "project:/contracts/HeroPrimeEngine.sol",
     "exportedSymbols": {
       "Context": [
-        4395
+        4506
       ],
       "HeroPrimeEngine": [
         2702
       ],
       "IHeroPrimeNFT": [
-        4336
+        4447
       ],
       "IHeroPrimeToken": [
-        4339
+        4450
       ],
       "Ownable": [
-        4704
+        4815
       ],
       "SafeMath": [
-        4588
+        4699
       ]
     },
     "id": 2703,
@@ -7751,7 +7751,7 @@
         "id": 2422,
         "nodeType": "ImportDirective",
         "scope": 2703,
-        "sourceUnit": 4705,
+        "sourceUnit": 4816,
         "src": "67:21:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -7762,7 +7762,7 @@
         "id": 2423,
         "nodeType": "ImportDirective",
         "scope": 2703,
-        "sourceUnit": 4337,
+        "sourceUnit": 4448,
         "src": "90:29:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -7773,7 +7773,7 @@
         "id": 2424,
         "nodeType": "ImportDirective",
         "scope": 2703,
-        "sourceUnit": 4340,
+        "sourceUnit": 4451,
         "src": "121:31:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -7786,7 +7786,7 @@
               "id": 2425,
               "name": "Context",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 4395,
+              "referencedDeclaration": 4506,
               "src": "184:7:4"
             },
             "id": 2426,
@@ -7795,14 +7795,14 @@
           }
         ],
         "contractDependencies": [
-          4395
+          4506
         ],
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 2702,
         "linearizedBaseContracts": [
           2702,
-          4395
+          4506
         ],
         "name": "HeroPrimeEngine",
         "nodeType": "ContractDefinition",
@@ -7813,7 +7813,7 @@
               "id": 2427,
               "name": "SafeMath",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 4588,
+              "referencedDeclaration": 4699,
               "src": "205:8:4"
             },
             "nodeType": "UsingForDirective",
@@ -8031,7 +8031,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4336",
+              "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4447",
               "typeString": "contract IHeroPrimeNFT"
             },
             "typeName": {
@@ -8041,13 +8041,13 @@
                 "id": 2450,
                 "name": "IHeroPrimeNFT",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 4336,
+                "referencedDeclaration": 4447,
                 "src": "625:13:4"
               },
-              "referencedDeclaration": 4336,
+              "referencedDeclaration": 4447,
               "src": "625:13:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4336",
+                "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4447",
                 "typeString": "contract IHeroPrimeNFT"
               }
             },
@@ -8064,7 +8064,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_IHeroPrimeToken_$4339",
+              "typeIdentifier": "t_contract$_IHeroPrimeToken_$4450",
               "typeString": "contract IHeroPrimeToken"
             },
             "typeName": {
@@ -8074,13 +8074,13 @@
                 "id": 2453,
                 "name": "IHeroPrimeToken",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 4339,
+                "referencedDeclaration": 4450,
                 "src": "667:15:4"
               },
-              "referencedDeclaration": 4339,
+              "referencedDeclaration": 4450,
               "src": "667:15:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IHeroPrimeToken_$4339",
+                "typeIdentifier": "t_contract$_IHeroPrimeToken_$4450",
                 "typeString": "contract IHeroPrimeToken"
               }
             },
@@ -8107,7 +8107,7 @@
                       "referencedDeclaration": 2452,
                       "src": "765:12:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4336",
+                        "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4447",
                         "typeString": "contract IHeroPrimeNFT"
                       }
                     },
@@ -8139,10 +8139,10 @@
                         "name": "IHeroPrimeNFT",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4336,
+                        "referencedDeclaration": 4447,
                         "src": "780:13:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_IHeroPrimeNFT_$4336_$",
+                          "typeIdentifier": "t_type$_t_contract$_IHeroPrimeNFT_$4447_$",
                           "typeString": "type(contract IHeroPrimeNFT)"
                         }
                       },
@@ -8157,13 +8157,13 @@
                       "src": "780:18:4",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4336",
+                        "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4447",
                         "typeString": "contract IHeroPrimeNFT"
                       }
                     },
                     "src": "765:33:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4336",
+                      "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4447",
                       "typeString": "contract IHeroPrimeNFT"
                     }
                   },
@@ -8186,7 +8186,7 @@
                       "referencedDeclaration": 2455,
                       "src": "809:14:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IHeroPrimeToken_$4339",
+                        "typeIdentifier": "t_contract$_IHeroPrimeToken_$4450",
                         "typeString": "contract IHeroPrimeToken"
                       }
                     },
@@ -8218,10 +8218,10 @@
                         "name": "IHeroPrimeToken",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4339,
+                        "referencedDeclaration": 4450,
                         "src": "826:15:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_IHeroPrimeToken_$4339_$",
+                          "typeIdentifier": "t_type$_t_contract$_IHeroPrimeToken_$4450_$",
                           "typeString": "type(contract IHeroPrimeToken)"
                         }
                       },
@@ -8236,13 +8236,13 @@
                       "src": "826:22:4",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IHeroPrimeToken_$4339",
+                        "typeIdentifier": "t_contract$_IHeroPrimeToken_$4450",
                         "typeString": "contract IHeroPrimeToken"
                       }
                     },
                     "src": "809:39:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IHeroPrimeToken_$4339",
+                      "typeIdentifier": "t_contract$_IHeroPrimeToken_$4450",
                       "typeString": "contract IHeroPrimeToken"
                     }
                   },
@@ -8767,7 +8767,7 @@
                                   "lValueRequested": false,
                                   "memberName": "add",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 4421,
+                                  "referencedDeclaration": 4532,
                                   "src": "1391:14:4",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -8851,7 +8851,7 @@
                                 "lValueRequested": false,
                                 "memberName": "add",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 4421,
+                                "referencedDeclaration": 4532,
                                 "src": "1289:14:4",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -8935,7 +8935,7 @@
                               "lValueRequested": false,
                               "memberName": "add",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 4421,
+                              "referencedDeclaration": 4532,
                               "src": "1187:14:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -9019,7 +9019,7 @@
                             "lValueRequested": false,
                             "memberName": "add",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4421,
+                            "referencedDeclaration": 4532,
                             "src": "1085:14:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -9758,7 +9758,7 @@
                               "referencedDeclaration": 2452,
                               "src": "2192:12:4",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4336",
+                                "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4447",
                                 "typeString": "contract IHeroPrimeNFT"
                               }
                             },
@@ -9769,7 +9769,7 @@
                             "lValueRequested": false,
                             "memberName": "ownerOf",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4282,
+                            "referencedDeclaration": 4393,
                             "src": "2192:20:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_address_$",
@@ -10283,7 +10283,7 @@
                       "lValueRequested": false,
                       "memberName": "div",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4518,
+                      "referencedDeclaration": 4629,
                       "src": "2422:23:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -10524,7 +10524,7 @@
                         "referencedDeclaration": 2452,
                         "src": "2614:12:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4336",
+                          "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4447",
                           "typeString": "contract IHeroPrimeNFT"
                         }
                       },
@@ -10535,7 +10535,7 @@
                       "lValueRequested": false,
                       "memberName": "heroPrimeLevel",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4289,
+                      "referencedDeclaration": 4400,
                       "src": "2614:27:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_uint256_$",
@@ -10684,7 +10684,7 @@
                           "lValueRequested": false,
                           "memberName": "sub",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 4438,
+                          "referencedDeclaration": 4549,
                           "src": "2713:16:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -10781,7 +10781,7 @@
                               "lValueRequested": false,
                               "memberName": "mul",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 4501,
+                              "referencedDeclaration": 4612,
                               "src": "2678:15:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -10810,7 +10810,7 @@
                           "lValueRequested": false,
                           "memberName": "mul",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 4501,
+                          "referencedDeclaration": 4612,
                           "src": "2678:23:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -10839,7 +10839,7 @@
                       "lValueRequested": false,
                       "memberName": "mul",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4501,
+                      "referencedDeclaration": 4612,
                       "src": "2678:34:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -11072,7 +11072,7 @@
                         "referencedDeclaration": 2452,
                         "src": "3096:12:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4336",
+                          "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4447",
                           "typeString": "contract IHeroPrimeNFT"
                         }
                       },
@@ -11083,7 +11083,7 @@
                       "lValueRequested": false,
                       "memberName": "exp",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4296,
+                      "referencedDeclaration": 4407,
                       "src": "3096:16:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
@@ -11144,7 +11144,7 @@
                           "name": "_msgSender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4383,
+                          "referencedDeclaration": 4494,
                           "src": "3185:10:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -11409,22 +11409,22 @@
     "absolutePath": "project:/contracts/HeroPrimeEngine.sol",
     "exportedSymbols": {
       "Context": [
-        4395
+        4506
       ],
       "HeroPrimeEngine": [
         2702
       ],
       "IHeroPrimeNFT": [
-        4336
+        4447
       ],
       "IHeroPrimeToken": [
-        4339
+        4450
       ],
       "Ownable": [
-        4704
+        4815
       ],
       "SafeMath": [
-        4588
+        4699
       ]
     },
     "id": 2703,
@@ -11448,7 +11448,7 @@
         "id": 2422,
         "nodeType": "ImportDirective",
         "scope": 2703,
-        "sourceUnit": 4705,
+        "sourceUnit": 4816,
         "src": "67:21:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -11459,7 +11459,7 @@
         "id": 2423,
         "nodeType": "ImportDirective",
         "scope": 2703,
-        "sourceUnit": 4337,
+        "sourceUnit": 4448,
         "src": "90:29:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -11470,7 +11470,7 @@
         "id": 2424,
         "nodeType": "ImportDirective",
         "scope": 2703,
-        "sourceUnit": 4340,
+        "sourceUnit": 4451,
         "src": "121:31:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -11483,7 +11483,7 @@
               "id": 2425,
               "name": "Context",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 4395,
+              "referencedDeclaration": 4506,
               "src": "184:7:4"
             },
             "id": 2426,
@@ -11492,14 +11492,14 @@
           }
         ],
         "contractDependencies": [
-          4395
+          4506
         ],
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 2702,
         "linearizedBaseContracts": [
           2702,
-          4395
+          4506
         ],
         "name": "HeroPrimeEngine",
         "nodeType": "ContractDefinition",
@@ -11510,7 +11510,7 @@
               "id": 2427,
               "name": "SafeMath",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 4588,
+              "referencedDeclaration": 4699,
               "src": "205:8:4"
             },
             "nodeType": "UsingForDirective",
@@ -11728,7 +11728,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4336",
+              "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4447",
               "typeString": "contract IHeroPrimeNFT"
             },
             "typeName": {
@@ -11738,13 +11738,13 @@
                 "id": 2450,
                 "name": "IHeroPrimeNFT",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 4336,
+                "referencedDeclaration": 4447,
                 "src": "625:13:4"
               },
-              "referencedDeclaration": 4336,
+              "referencedDeclaration": 4447,
               "src": "625:13:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4336",
+                "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4447",
                 "typeString": "contract IHeroPrimeNFT"
               }
             },
@@ -11761,7 +11761,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_IHeroPrimeToken_$4339",
+              "typeIdentifier": "t_contract$_IHeroPrimeToken_$4450",
               "typeString": "contract IHeroPrimeToken"
             },
             "typeName": {
@@ -11771,13 +11771,13 @@
                 "id": 2453,
                 "name": "IHeroPrimeToken",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 4339,
+                "referencedDeclaration": 4450,
                 "src": "667:15:4"
               },
-              "referencedDeclaration": 4339,
+              "referencedDeclaration": 4450,
               "src": "667:15:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IHeroPrimeToken_$4339",
+                "typeIdentifier": "t_contract$_IHeroPrimeToken_$4450",
                 "typeString": "contract IHeroPrimeToken"
               }
             },
@@ -11804,7 +11804,7 @@
                       "referencedDeclaration": 2452,
                       "src": "765:12:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4336",
+                        "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4447",
                         "typeString": "contract IHeroPrimeNFT"
                       }
                     },
@@ -11836,10 +11836,10 @@
                         "name": "IHeroPrimeNFT",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4336,
+                        "referencedDeclaration": 4447,
                         "src": "780:13:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_IHeroPrimeNFT_$4336_$",
+                          "typeIdentifier": "t_type$_t_contract$_IHeroPrimeNFT_$4447_$",
                           "typeString": "type(contract IHeroPrimeNFT)"
                         }
                       },
@@ -11854,13 +11854,13 @@
                       "src": "780:18:4",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4336",
+                        "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4447",
                         "typeString": "contract IHeroPrimeNFT"
                       }
                     },
                     "src": "765:33:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4336",
+                      "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4447",
                       "typeString": "contract IHeroPrimeNFT"
                     }
                   },
@@ -11883,7 +11883,7 @@
                       "referencedDeclaration": 2455,
                       "src": "809:14:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IHeroPrimeToken_$4339",
+                        "typeIdentifier": "t_contract$_IHeroPrimeToken_$4450",
                         "typeString": "contract IHeroPrimeToken"
                       }
                     },
@@ -11915,10 +11915,10 @@
                         "name": "IHeroPrimeToken",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4339,
+                        "referencedDeclaration": 4450,
                         "src": "826:15:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_IHeroPrimeToken_$4339_$",
+                          "typeIdentifier": "t_type$_t_contract$_IHeroPrimeToken_$4450_$",
                           "typeString": "type(contract IHeroPrimeToken)"
                         }
                       },
@@ -11933,13 +11933,13 @@
                       "src": "826:22:4",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IHeroPrimeToken_$4339",
+                        "typeIdentifier": "t_contract$_IHeroPrimeToken_$4450",
                         "typeString": "contract IHeroPrimeToken"
                       }
                     },
                     "src": "809:39:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IHeroPrimeToken_$4339",
+                      "typeIdentifier": "t_contract$_IHeroPrimeToken_$4450",
                       "typeString": "contract IHeroPrimeToken"
                     }
                   },
@@ -12464,7 +12464,7 @@
                                   "lValueRequested": false,
                                   "memberName": "add",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 4421,
+                                  "referencedDeclaration": 4532,
                                   "src": "1391:14:4",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -12548,7 +12548,7 @@
                                 "lValueRequested": false,
                                 "memberName": "add",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 4421,
+                                "referencedDeclaration": 4532,
                                 "src": "1289:14:4",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -12632,7 +12632,7 @@
                               "lValueRequested": false,
                               "memberName": "add",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 4421,
+                              "referencedDeclaration": 4532,
                               "src": "1187:14:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -12716,7 +12716,7 @@
                             "lValueRequested": false,
                             "memberName": "add",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4421,
+                            "referencedDeclaration": 4532,
                             "src": "1085:14:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -13455,7 +13455,7 @@
                               "referencedDeclaration": 2452,
                               "src": "2192:12:4",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4336",
+                                "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4447",
                                 "typeString": "contract IHeroPrimeNFT"
                               }
                             },
@@ -13466,7 +13466,7 @@
                             "lValueRequested": false,
                             "memberName": "ownerOf",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4282,
+                            "referencedDeclaration": 4393,
                             "src": "2192:20:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_address_$",
@@ -13980,7 +13980,7 @@
                       "lValueRequested": false,
                       "memberName": "div",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4518,
+                      "referencedDeclaration": 4629,
                       "src": "2422:23:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -14221,7 +14221,7 @@
                         "referencedDeclaration": 2452,
                         "src": "2614:12:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4336",
+                          "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4447",
                           "typeString": "contract IHeroPrimeNFT"
                         }
                       },
@@ -14232,7 +14232,7 @@
                       "lValueRequested": false,
                       "memberName": "heroPrimeLevel",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4289,
+                      "referencedDeclaration": 4400,
                       "src": "2614:27:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_uint256_$",
@@ -14381,7 +14381,7 @@
                           "lValueRequested": false,
                           "memberName": "sub",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 4438,
+                          "referencedDeclaration": 4549,
                           "src": "2713:16:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -14478,7 +14478,7 @@
                               "lValueRequested": false,
                               "memberName": "mul",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 4501,
+                              "referencedDeclaration": 4612,
                               "src": "2678:15:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -14507,7 +14507,7 @@
                           "lValueRequested": false,
                           "memberName": "mul",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 4501,
+                          "referencedDeclaration": 4612,
                           "src": "2678:23:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -14536,7 +14536,7 @@
                       "lValueRequested": false,
                       "memberName": "mul",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4501,
+                      "referencedDeclaration": 4612,
                       "src": "2678:34:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -14769,7 +14769,7 @@
                         "referencedDeclaration": 2452,
                         "src": "3096:12:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4336",
+                          "typeIdentifier": "t_contract$_IHeroPrimeNFT_$4447",
                           "typeString": "contract IHeroPrimeNFT"
                         }
                       },
@@ -14780,7 +14780,7 @@
                       "lValueRequested": false,
                       "memberName": "exp",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4296,
+                      "referencedDeclaration": 4407,
                       "src": "3096:16:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
@@ -14841,7 +14841,7 @@
                           "name": "_msgSender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4383,
+                          "referencedDeclaration": 4494,
                           "src": "3185:10:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -15110,12 +15110,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x0a106584B6De70B79818B60e3cEe8769B5866476",
-      "transactionHash": "0xb30f2602111e18be292420264c48a1667452af72e3f8f75075ecc80da7c470a4"
+      "address": "0x8F54eB44d932d91F8f7Ba46121c470b0848c5D1f",
+      "transactionHash": "0xaa8379e554b2c446eb0e57da2a92927942fbd9a8bc93eb2b19c676dc24c0dad5"
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-09-18T15:56:15.871Z",
+  "updatedAt": "2021-09-22T22:19:56.192Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

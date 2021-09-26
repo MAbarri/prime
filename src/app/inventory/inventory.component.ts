@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Web3Service} from '../service/web3.service';
+import { PlayerService} from "../service/player.service";
 
 @Component({
   selector: 'app-inventory',
@@ -23,14 +24,14 @@ export class InventoryComponent implements OnInit {
   myHeroesIndexes : any;
   myHeroes : any;
 
-  constructor(private web3: Web3Service) {
-    
+  constructor(private web3: Web3Service, private playerService : PlayerService) {
     this.web3.checkAndInstantiateWeb3()
       .then((checkConn: any) => {
         if (checkConn === 'connected') {
           this.web3.loadBlockChainData()
             .then((accountData: any) => {
               this.accountNumber = accountData[0];
+              this.getPlayerDetails();
               this.web3.getTokenContract()
                 .then((contractRes: any) => {
                   if (contractRes) {
@@ -80,7 +81,7 @@ export class InventoryComponent implements OnInit {
       this.nftContract.methods.getHeroPrimes(this.myHeroesIndexes)
       .call()
       .then(value => {
-        console.log(value)
+        console.log("this.myHeroes", value)
         this.myHeroes = value;
       });
     });
@@ -121,5 +122,17 @@ export class InventoryComponent implements OnInit {
       this.getHeros()
       this.getRolls()
     });
+  }
+
+  getPlayerDetails(){
+    this.playerService.findByAddress(this.accountNumber).subscribe(function(response){
+      console.log('tokens Claimed', response)
+    })
+  }
+
+  claimTokens(){
+    this.playerService.claimTokens(this.accountNumber).subscribe(function(response){
+      console.log('tokens Claimed', response)
+    })
   }
 }

@@ -11,12 +11,11 @@ contract HeroPrimeNFT is ERC721, Ownable {
     using EnumerableSet for EnumerableSet.UintSet;
     
     enum Element {
-        WARRIOR,
-        AQUA,
-        FIEND,
-        ROCK,
-        INSECT,
-        MACHINE
+        FIRE,
+        WATER,
+        LIGHT,
+        DARK,
+        EARTH
     }
     
     event rolledHero(uint256 indexed tokenId, address buyer);
@@ -170,10 +169,10 @@ contract HeroPrimeNFT is ERC721, Ownable {
         heroPrimeRolls[receiver] = heroPrimeRolls[receiver].sub(1);
         uint256 nextTokenId = _getNextTokenId();
         _mint(receiver, nextTokenId);
-
+        uint rarity = manager.generation("rarity", nextTokenId);
         heroPrimes[nextTokenId] = HeroPrime({
             id: nextTokenId,
-            generation: 0,
+            generation: rarity,
             element: element,
             exp: 0,
             dna: 0,

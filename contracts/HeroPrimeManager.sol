@@ -62,10 +62,36 @@ contract HeroPrimeManager is Context, Ownable {
         heroPrimeNFT.rollHero(amount, _msgSender(), elementindex);
     }
 
-    function generation() external view returns (uint256){
-        
+    function generation(string memory field, uint id) public view returns (uint256){
+        uint result;
+        if(keccak256(bytes(field)) == keccak256(bytes("rarity"))) {
+            uint rand = random(id, 2);
+            result = rand.div(16);
+        } else if(keccak256(bytes(field)) == keccak256(bytes("element"))) {
+            uint rand = random(id, 2);
+            result = rand.div(20);
+        }
+        return result;
     }
-
+  function random(uint256 _id, uint256 _length)
+        private
+        view
+        returns (uint256)
+    {
+        return
+            uint256(
+                uint256(
+                    keccak256(
+                        abi.encodePacked(
+                            block.difficulty,
+                            block.timestamp,
+                            _id,
+                            _length
+                        )
+                    )
+                )
+            ) % (10**_length);
+    }
     // attackFee
     // enterDungeonFee
 
