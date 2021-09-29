@@ -9,5 +9,6 @@ db.url = dbConfig.url;
 // db.tutorials = require("./tutorial.model.js")(mongoose);
 db.players = require("./player.model.js")(mongoose);
 db.users = require("./user.model.js")(mongoose);
+db.battles = require("./battle.model.js")(mongoose);
 
 module.exports = db;

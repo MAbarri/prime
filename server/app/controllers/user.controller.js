@@ -1,5 +1,6 @@
 const db = require("../models");
 const User = db.users;
+const Player = db.players;
 const ethUtil = require("ethereumjs-util");
 const jwt = require("jsonwebtoken");
 
@@ -70,7 +71,15 @@ exports.findByAddress = (req, res) => {
         user
           .save(user)
           .then(data => {
-            res.send(data);
+            
+            // Create a Player
+            const player = new Player({ address: address });
+
+            // Save Player in the database
+            player .save(player) .then(newPlayer => { 
+              res.send(data);
+             })
+
           })
           .catch(err => {
             res.status(500).send({

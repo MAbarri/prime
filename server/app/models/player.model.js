@@ -2,7 +2,7 @@ module.exports = mongoose => {
   var schema = mongoose.Schema(
     {
       address: String,
-      claimableToken: Number,
+      claimableToken: {type: Number, default: 0},
       claimableExp : {}
     },
     { timestamps: true }

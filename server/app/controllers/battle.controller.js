@@ -1,9 +1,14 @@
+const _ = require('underscore');
+
 const db = require("../models");
 const Player = db.players;
+const Battle = db.battles;
 
 const web3 = require('../helpers/web3').getWeb3();
 const token = require('../helpers/tokenContract');
-const nft = require('../helpers/nftContract');
+
+const Monster = require('../game-settings/monsters.json');
+const NORMAL_MONSTERS = Monster.arenaMonsters;
 
 // Create and Save a new Player
 exports.create = (req, res) => {
@@ -68,10 +73,10 @@ exports.getByAddress = (req, res) => {
     });
 };
 // Find a single Player with an id
-exports.getMyStats = (req, res) => {
-  let address = req.user.payload.publicAddress;
+exports.findOne = (req, res) => {
+  const id = req.params.id;
 
-  Player.findOne({address: address})
+  Player.findById(id)
     .then(data => {
       if (!data)
         res.status(404).send({ message: "Not found Player with id " + id });
@@ -162,53 +167,58 @@ exports.findAllPublished = (req, res) => {
     });
 };
 
-// FclaimTokens Players
-exports.claimTokens = async (req, res) => {
-  let address = req.params.address;
+// getMonsters
+exports.getMonsters = async (req, res) => {
+  res.send(NORMAL_MONSTERS);
+};
 
-  Player.findOne({ address: address })
-    .then(async player => {
-      const accounts = await web3.eth.getAccounts();
-      token.redeemToken(address, player.claimableToken).then(receipt => {
-        res.send(receipt);
-      }).catch(err => {
-        res.status(500).send({
-          message:
-            err.message || "Some error occurred while retrieving players."
-        });
-      });
+// getMonsters
+exports.attackMonster = async (req, res) => {
+  let address = req.user.payload.publicAddress;
+
+  let hero_id = req.body.hero;
+  let monster_id = req.body.monster;
+
+  let target = _.find(NORMAL_MONSTERS, function(monster){
+    return monster.id == monster_id;
+  })
+
+  let rand = getRandomInt(0, 100);
+
+  let battleResult = {
+    ownerAddress: address,
+    heroes: [hero_id],
+    items: [],
+    target: [monster_id]
+  }
+  if(rand<=target.scale) {
+    battleResult.result = 'WIN';
+    battleResult.reward = target.reward;
+  } else 
+    battleResult.result = 'LOSS';
+
+  const finalBattle = new Battle(battleResult);
+
+  // Save Player in the database
+  finalBattle
+    .save(finalBattle)
+    .then(data => {
+
+      Player.findOneAndUpdate({address: address}, { $inc: { claimableToken: target.reward }})
+      .then(data => {
+        res.send(finalBattle);
+      })
+
     })
     .catch(err => {
-      console.log('err', err)
       res.status(500).send({
         message:
-          err.message || "Some error occurred while retrieving players."
+          err.message || "Some error occurred while creating the Player."
       });
     });
 };
-
-// FclaimTokens Players
-exports.getHeroes = async (req, res) => {
-  let address = req.user.payload.publicAddress;
-  console.log('address', address)
-  
-  // Player.findOne({ address: address })
-  //   .then(async player => {
-  //     const accounts = await web3.eth.getAccounts();
-      nft.getHeroes(address).then(heroes => {
-        res.send(heroes);
-      }).catch(err => {
-        res.status(500).send({
-          message:
-            err.message || "Some error occurred while retrieving players."
-        });
-      });
-  //   })
-  //   .catch(err => {
-  //     console.log('err', err)
-  //     res.status(500).send({
-  //       message:
-  //         err.message || "Some error occurred while retrieving players."
-  //     });
-  //   });
-};
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}

@@ -1,0 +1,36 @@
+{
+    "arenaMonsters": [
+        {
+            "id": 0,
+            "name" : "7liwa",
+            "level" : 1,
+            "element" : 1,
+            "scale" : 90,
+            "reward" : 50
+        },
+        {
+            "id": 1,
+            "name" : "Chi5a TRAX",
+            "level" : 2,
+            "element" : 1,
+            "scale" : 70,
+            "reward" : 100
+        },
+        {
+            "id": 2,
+            "name" : "AKHENOUCH",
+            "level" : 3,
+            "element" : 1,
+            "scale" : 60,
+            "reward" : 200
+        },
+        {
+            "id": 3,
+            "name" : "MOHAMED 6",
+            "level" : 4,
+            "element" : 1,
+            "scale" : 50,
+            "reward" : 500
+        }
+    ]
+}

@@ -38,6 +38,7 @@ app.get("/", (req, res) => {
 // require("./app/routes/turorial.routes")(app);
 require("./app/routes/player.routes")(app);
 require("./app/routes/user.routes")(app);
+require("./app/routes/battle.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 4000;
