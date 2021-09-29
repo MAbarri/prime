@@ -8,6 +8,7 @@
     <button routerLink="/marketplace">Marketplace</button>
     <button routerLink="/shop">Shop</button>
     <button routerLink="/inventory">Inventory</button>
+    <button style="float: right; margin-left: 10px;" (click)="logOut()" >Log out</button>
     <span style="float: right">Balance: {{ tokenBalance | tokenDecimals }}</span>
   </div>
 

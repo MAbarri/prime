@@ -1,3 +1,7 @@
+<div style="width: 800px; margin: auto" *ngIf="player">
+    <h4>Unclaimed Tokens : ({{player.claimableToken}})</h4>
+    <button *ngIf="player.claimableToken>0" (click)="claimTokens()" >Claim Tokens</button>
+</div>
 <div style="width: 800px; margin: auto">
     <h4>My Heroes : ({{myHeroes ? myHeroes.length : 0}})</h4>
     <div style="width: 200px; display: inline-block;    padding: 10px; border: solid black 2px; border-radius: 8px;" *ngFor="let hero of myHeroes">
@@ -5,6 +9,7 @@
         <p>DNA : {{hero['dna']}}<p>
         <p>Element : {{hero['element']}}<p>
         <p>Experience : {{hero['exp']}} Exp</p>
+        <p>Rarity : Tier {{hero['generation']}} </p>
     </div>
 
 </div>

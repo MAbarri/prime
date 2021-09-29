@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import {Web3Service} from '../service/web3.service';
 import { PlayerService} from "../service/player.service";
 
@@ -24,7 +24,9 @@ export class InventoryComponent implements OnInit {
   myHeroesIndexes : any;
   myHeroes : any;
 
-  constructor(private web3: Web3Service, private playerService : PlayerService) {
+  player: any;
+
+  constructor(private cdr: ChangeDetectorRef, private web3: Web3Service, private playerService : PlayerService) {
     this.web3.checkAndInstantiateWeb3()
       .then((checkConn: any) => {
         if (checkConn === 'connected') {
@@ -115,7 +117,7 @@ export class InventoryComponent implements OnInit {
   }
   rollForHero(){
     
-    this.managerContract.methods.rollForHero(1, 0)
+    this.managerContract.methods.rollForHero(1, 1)
     .send({from: this.accountNumber})
     .once('receipt', (receipt) => {
       console.log('receipt', receipt)
@@ -125,8 +127,10 @@ export class InventoryComponent implements OnInit {
   }
 
   getPlayerDetails(){
-    this.playerService.findByAddress(this.accountNumber).subscribe(function(response){
-      console.log('tokens Claimed', response)
+    this.playerService.getmyStats().subscribe((response) =>{
+    this.player = response;
+      this.cdr.detectChanges();
+      console.log('this.player', this.player)
     })
   }
 
@@ -134,5 +138,13 @@ export class InventoryComponent implements OnInit {
     this.playerService.claimTokens(this.accountNumber).subscribe(function(response){
       console.log('tokens Claimed', response)
     })
+  }
+
+  generation(){    
+    this.managerContract.methods.generation("rarity", 8)
+    .call()
+    .then(value => {
+      console.log('value random', value)
+    });
   }
 }

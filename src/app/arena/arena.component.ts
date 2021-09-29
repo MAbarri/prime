@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import {Web3Service} from '../service/web3.service';
+import { BattleService} from "../service/battle.service";
 
 @Component({
   selector: 'app-arena',
@@ -7,6 +8,7 @@ import {Web3Service} from '../service/web3.service';
   styleUrls: ['./arena.component.css']
 })
 export class ArenaComponent implements OnInit {
+  loaded = false;
 
   accountNumber: any;
   tokenBalance: any;
@@ -15,12 +17,14 @@ export class ArenaComponent implements OnInit {
   private tokenContract : any;
   private nftContract : any;
   
-  myHeroesIndexes : any;
   myHeroes : any;
+  monsters : any;
 
   selectedHero: any;
+
+  battleResult: any;
   
-  constructor(private web3: Web3Service) {
+  constructor(private cdr: ChangeDetectorRef, private web3: Web3Service, private battleService : BattleService) {
     
     this.web3.checkAndInstantiateWeb3()
       .then((checkConn: any) => {
@@ -29,25 +33,9 @@ export class ArenaComponent implements OnInit {
             .then((accountData: any) => {
               this.accountNumber = accountData[0];
 
-              this.web3.getTokenContract()
-                .then((contractRes: any) => {
-                  if (contractRes) {
-                    this.tokenContract = contractRes;
-                  }
-                });
-              this.web3.getNFTContract()
-                .then((contractRes: any) => {
-                  if (contractRes) {
-                    this.nftContract = contractRes;
-                    this.getHeros();
-                  }
-                });
-              this.web3.getManagerContract()
-                .then((contractRes: any) => {
-                  if (contractRes) {
-                    this.managerContract = contractRes;
-                  }
-                });
+              this.getHeros();
+              this.getMonsters();
+
               }, err => {
                 console.log('account error', err);
               });
@@ -61,23 +49,35 @@ export class ArenaComponent implements OnInit {
   }
 
   getHeros(){
-    this.nftContract.methods.getOwnerTokens(this.accountNumber)
-    .call()
-    .then(value => {
-      this.myHeroesIndexes = value;
-      this.nftContract.methods.getHeroPrimes(this.myHeroesIndexes)
-      .call()
-      .then(value => {
-        console.log(value)
-        this.myHeroes = value;
-      });
-    });
+    this.battleService.getHeros().subscribe((response) => {
+      this.myHeroes = response;
+      this.loaded = true;
+      this.cdr.detectChanges();
+      console.log('myHeroes ?', this.myHeroes)
+    })
   }
-  attackMonster(monsterIndex) {
-    this.managerContract.methods.attackMonster(this.selectedHero, monsterIndex)
-    .send({from: this.accountNumber})
-    .once('receipt', (receipt) => {
-      console.log('receipt', receipt)
-    });
+  
+
+  getMonsters(){
+    this.battleService.getMonsters().subscribe((response) => {
+      this.monsters = response;
+      this.loaded = true;
+      this.cdr.detectChanges();
+      console.log('monsters ?', this.monsters)
+    })
   }
+
+  attackMonster(_id){
+    this.battleService.attackMonster(this.selectedHero, _id).subscribe((response) => {
+      this.battleResult = response;
+    })
+  }
+
+  // attackMonster(monsterIndex) {
+  //   this.managerContract.methods.attackMonster(this.selectedHero, monsterIndex)
+  //   .send({from: this.accountNumber})
+  //   .once('receipt', (receipt) => {
+  //     console.log('receipt', receipt)
+  //   });
+  // }
 }

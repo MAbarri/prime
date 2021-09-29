@@ -15,15 +15,15 @@
     "absolutePath": "project:/contracts/IHeroPrimeToken.sol",
     "exportedSymbols": {
       "IHeroPrimeToken": [
-        4450
+        4483
       ]
     },
-    "id": 4451,
+    "id": 4484,
     "license": "UNLICENSED",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4449,
+        "id": 4482,
         "literals": [
           "solidity",
           "^",
@@ -39,14 +39,14 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": true,
-        "id": 4450,
+        "id": 4483,
         "linearizedBaseContracts": [
-          4450
+          4483
         ],
         "name": "IHeroPrimeToken",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 4451,
+        "scope": 4484,
         "src": "67:32:13"
       }
     ],
@@ -56,15 +56,15 @@
     "absolutePath": "project:/contracts/IHeroPrimeToken.sol",
     "exportedSymbols": {
       "IHeroPrimeToken": [
-        4450
+        4483
       ]
     },
-    "id": 4451,
+    "id": 4484,
     "license": "UNLICENSED",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4449,
+        "id": 4482,
         "literals": [
           "solidity",
           "^",
@@ -80,14 +80,14 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": true,
-        "id": 4450,
+        "id": 4483,
         "linearizedBaseContracts": [
-          4450
+          4483
         ],
         "name": "IHeroPrimeToken",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 4451,
+        "scope": 4484,
         "src": "67:32:13"
       }
     ],
@@ -99,7 +99,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-09-22T22:19:21.515Z",
+  "updatedAt": "2021-09-29T15:36:39.402Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

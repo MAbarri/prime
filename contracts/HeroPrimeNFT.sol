@@ -169,7 +169,7 @@ contract HeroPrimeNFT is ERC721, Ownable {
         heroPrimeRolls[receiver] = heroPrimeRolls[receiver].sub(1);
         uint256 nextTokenId = _getNextTokenId();
         _mint(receiver, nextTokenId);
-        uint rarity = manager.generation("rarity", nextTokenId);
+        uint rarity = generation("rarity", nextTokenId);
         heroPrimes[nextTokenId] = HeroPrime({
             id: nextTokenId,
             generation: rarity,
@@ -208,6 +208,50 @@ contract HeroPrimeNFT is ERC721, Ownable {
     }
 
     
+
+    function generation(string memory field, uint id) internal view returns (uint256){
+        uint result;
+        if(keccak256(bytes(field)) == keccak256(bytes("rarity"))) {
+            uint rand = random(id, 2);
+            if(rand < 5) {
+                result = 1;
+            } else if (rand < 15) {
+                result = 2;
+            } else if (rand < 35) {
+                result = 3;
+            } else if (rand < 65) {
+                result = 4;
+            } else {
+                result = 5;
+            }
+        } else if(keccak256(bytes(field)) == keccak256(bytes("element"))) {
+            uint rand = random(id, 2);
+            result = rand.div(20);
+        }
+        return result;
+    }
+  function random(uint256 _id, uint256 _length)
+        private
+        view
+        returns (uint256)
+    {
+        return
+            uint256(
+                uint256(
+                    keccak256(
+                        abi.encodePacked(
+                            block.difficulty,
+                            block.timestamp,
+                            _id,
+                            _length
+                        )
+                    )
+                )
+            ) % (10**_length);
+    }
+
+
+
     // marketplace
 
     function placeOrder(uint256 _tokenId, uint256 _price, address sender) external onlyManager {

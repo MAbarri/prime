@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Web3Service } from './service/web3.service';
 import { AuthService } from './service/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,7 @@ export class AppComponent {
   tokenBalance: any;
   private tokenContract : any;
 
-  constructor(private web3: Web3Service, private authService: AuthService) {
+  constructor(private web3: Web3Service, private authService: AuthService, private router: Router) {
     this.isAlive = this.isAuthenticated();
     this.web3.checkAndInstantiateWeb3()
       .then((checkConn: any) => {
@@ -49,6 +50,13 @@ export class AppComponent {
 
    isAuthenticated(){
     return this.authService.isAuthenticated();
+   }
+   logOut(){
+     this.authService.logOut();
+     this.router.navigate(['/login'])
+        .then(() => {
+          window.location.reload();
+        });
    }
 
 
