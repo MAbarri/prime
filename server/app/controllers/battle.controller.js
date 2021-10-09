@@ -19,6 +19,7 @@ exports.attackMonster = async (req, res) => {
   let address = req.user.payload.publicAddress;
 
   let hero_id = req.body.hero;
+  let artifact_id = req.body.artifacts;
   let monster_id = req.body.monster;
 
   let target = _.find(NORMAL_MONSTERS, function(monster){
@@ -30,7 +31,7 @@ exports.attackMonster = async (req, res) => {
   let battleResult = {
     ownerAddress: address.toLowerCase(),
     heroes: [hero_id],
-    items: [],
+    items: [artifact_id],
     target: [monster_id]
   }
   if(rand<=target.scale) {

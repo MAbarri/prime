@@ -15,12 +15,16 @@ export class BattleService {
     return this.httpClient.get(apiBaseUrl+"heroes");
   }
 
+  getArtifacts(): Observable<any> {
+    return this.httpClient.get(apiBaseUrl+"artifacts");
+  }
+
   getMonsters(): Observable<any> {
     return this.httpClient.get(apiBaseUrl+"monsters");
   }
 
-  attackMonster(heroid, monsterid): Observable<any> {
-    return this.httpClient.post(apiBaseUrl+"attackMonster", {hero: heroid, monster: monsterid});
+  attackMonster(heroid, artifact, monsterid): Observable<any> {
+    return this.httpClient.post(apiBaseUrl+"attackMonster", {hero: heroid, monster: monsterid, artifacts: artifact});
   }
 
 }

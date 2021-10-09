@@ -5,6 +5,12 @@
             <option *ngFor="let hero of myHeroes" [value]="hero.id" >ID: {{hero.id}}</option>
         </select>
     </div>
+    <div style="width: 400px;margin: auto;">
+        <h4>Select an Artifacts :</h4>
+        <select [(ngModel)]="selectedArtifact" style="    width: 160px; ">
+            <option *ngFor="let artifact of myArtifacts" [value]="artifact.id" >ID: {{artifact.id}}</option>
+        </select>
+    </div>
     
     <div style="width: 800px; margin: auto">
         <div style="width: 200px;display: inline-block" *ngFor="let monster of monsters">

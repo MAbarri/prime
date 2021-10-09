@@ -4,6 +4,7 @@ const Player = db.players;
 const web3 = require('../helpers/web3').getWeb3();
 const token = require('../helpers/tokenContract');
 const nft = require('../helpers/nftContract');
+const artifactNft = require('../helpers/artifactNftContract');
 
 // Find a single Player with an id
 exports.getByAddress = (req, res) => {
@@ -60,28 +61,32 @@ exports.claimTokens = async (req, res) => {
     });
 };
 
-// FclaimTokens Players
+// getHeroes
 exports.getHeroes = async (req, res) => {
   let address = req.user.payload.publicAddress;
   console.log('address', address)
-  
-  // Player.findOne({ address: address })
-  //   .then(async player => {
-  //     const accounts = await web3.eth.getAccounts();
-      nft.getHeroes(address).then(heroes => {
-        res.send(heroes);
-      }).catch(err => {
-        res.status(500).send({
-          message:
-            err.message || "Some error occurred while retrieving players."
-        });
+
+    nft.getHeroes(address).then(heroes => {
+      res.send(heroes);
+    }).catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving players."
       });
-  //   })
-  //   .catch(err => {
-  //     console.log('err', err)
-  //     res.status(500).send({
-  //       message:
-  //         err.message || "Some error occurred while retrieving players."
-  //     });
-  //   });
+    });
+};
+
+// getArtifacts
+exports.getArtifacts = async (req, res) => {
+  let address = req.user.payload.publicAddress;
+  console.log('address', address)
+
+  artifactNft.getArtifacts(address).then(heroes => {
+      res.send(heroes);
+    }).catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving players."
+      });
+    });
 };

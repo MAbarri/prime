@@ -15,15 +15,15 @@
     "absolutePath": "project:/contracts/IHeroPrimeToken.sol",
     "exportedSymbols": {
       "IHeroPrimeToken": [
-        6970
+        8403
       ]
     },
-    "id": 6971,
+    "id": 8404,
     "license": "UNLICENSED",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 6969,
+        "id": 8402,
         "literals": [
           "solidity",
           "^",
@@ -31,7 +31,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "40:23:27"
+        "src": "40:23:29"
       },
       {
         "abstract": false,
@@ -39,32 +39,32 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": true,
-        "id": 6970,
+        "id": 8403,
         "linearizedBaseContracts": [
-          6970
+          8403
         ],
         "name": "IHeroPrimeToken",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 6971,
-        "src": "67:32:27"
+        "scope": 8404,
+        "src": "67:32:29"
       }
     ],
-    "src": "40:59:27"
+    "src": "40:59:29"
   },
   "legacyAST": {
     "absolutePath": "project:/contracts/IHeroPrimeToken.sol",
     "exportedSymbols": {
       "IHeroPrimeToken": [
-        6970
+        8403
       ]
     },
-    "id": 6971,
+    "id": 8404,
     "license": "UNLICENSED",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 6969,
+        "id": 8402,
         "literals": [
           "solidity",
           "^",
@@ -72,7 +72,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "40:23:27"
+        "src": "40:23:29"
       },
       {
         "abstract": false,
@@ -80,18 +80,18 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": true,
-        "id": 6970,
+        "id": 8403,
         "linearizedBaseContracts": [
-          6970
+          8403
         ],
         "name": "IHeroPrimeToken",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 6971,
-        "src": "67:32:27"
+        "scope": 8404,
+        "src": "67:32:29"
       }
     ],
-    "src": "40:59:27"
+    "src": "40:59:29"
   },
   "compiler": {
     "name": "solc",
@@ -99,7 +99,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-10-08T11:32:43.808Z",
+  "updatedAt": "2021-10-09T16:52:08.951Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

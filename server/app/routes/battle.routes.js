@@ -7,6 +7,9 @@ module.exports = app => {
   
     // Get My Heroes
     router.get("/heroes", auth, players.getHeroes);
+  
+    // Get My Artifacts
+    router.get("/artifacts", auth, players.getArtifacts);
 
     // Get monsters
     router.get("/monsters", auth, battles.getMonsters);

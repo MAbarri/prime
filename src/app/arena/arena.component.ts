@@ -17,10 +17,12 @@ export class ArenaComponent implements OnInit {
   private tokenContract : any;
   private nftContract : any;
   
+  myArtifacts : any;
   myHeroes : any;
   monsters : any;
 
   selectedHero: any;
+  selectedArtifact: any;
 
   battleResult: any;
   
@@ -34,6 +36,7 @@ export class ArenaComponent implements OnInit {
               this.accountNumber = accountData[0];
 
               this.getHeros();
+              this.getArtifacts();
               this.getMonsters();
 
               }, err => {
@@ -56,6 +59,15 @@ export class ArenaComponent implements OnInit {
       console.log('myHeroes ?', this.myHeroes)
     })
   }
+
+  getArtifacts(){
+    this.battleService.getArtifacts().subscribe((response) => {
+      this.myArtifacts = response;
+      this.loaded = true;
+      this.cdr.detectChanges();
+      console.log('myHeroes ?', this.myHeroes)
+    })
+  }
   
 
   getMonsters(){
@@ -68,7 +80,7 @@ export class ArenaComponent implements OnInit {
   }
 
   attackMonster(_id){
-    this.battleService.attackMonster(this.selectedHero, _id).subscribe((response) => {
+    this.battleService.attackMonster(this.selectedHero, this.selectedArtifact, _id).subscribe((response) => {
       this.battleResult = response;
     })
   }
