@@ -1,10 +1,11 @@
 const HeroPrimeToken = artifacts.require("HeroPrimeToken");
 const NFT = artifacts.require("HeroPrimeNFT");
+const ArtifactNFT = artifacts.require("HeroPrimeArtifactNFT");
 const Engine = artifacts.require("HeroPrimeEngine");
 const Manager = artifacts.require("HeroPrimeManager");
 
 module.exports = function(deployer) {
-    return deployer.deploy(Manager, HeroPrimeToken.address, NFT.address, Engine.address);
+    return deployer.deploy(Manager, HeroPrimeToken.address, NFT.address, ArtifactNFT.address, Engine.address);
 };
 
 // const HeroPrimeToken = artifacts.require("HeroPrimeToken");

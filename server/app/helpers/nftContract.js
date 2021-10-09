@@ -1,10 +1,10 @@
 const _ = require('underscore');
 
 const Web3 = require('web3')
-const nftArtifact = require('./../../../build/contracts/HeroPrimeNFT.json');
+const nftArtifact = require('./../../build/contracts/HeroPrimeNFT.json');
 const Provider = require("@truffle/hdwallet-provider");
 
-const networkUrl = 'HTTP://127.0.0.1:7545';
+const networkUrl = 'https://data-seed-prebsc-1-s1.binance.org:8545';
 const ownerAddress = "0x79cf51B5253991f8FAD399958AE8DAeF31de358E";
 const ownerPrivateAddress = "08fe8f7e35072c7af83bbd2d37e6653f4fc43a7627dc06c294ed097ad841dc52";
 

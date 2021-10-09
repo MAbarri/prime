@@ -23,7 +23,4 @@ export class PlayerService {
     return this.httpClient.get(apiBaseUrl+ "claimTokens/:" + address);
   }
 
-  authenticate(data: any) : Observable<any> {
-      return this.httpClient.post(apiBaseUrl+"auth", data);
-  }
 }

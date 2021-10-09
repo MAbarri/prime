@@ -1,6 +1,7 @@
 <div style="width: 800px; margin: auto" *ngIf="player">
     <h4>Unclaimed Tokens : ({{player.claimableToken}})</h4>
     <button *ngIf="player.claimableToken>0" (click)="claimTokens()" >Claim Tokens</button>
+    <button (click)="executeClaimTokens()" >Execute Claim Tokens</button>
 </div>
 <div style="width: 800px; margin: auto">
     <h4>My Heroes : ({{myHeroes ? myHeroes.length : 0}})</h4>
@@ -11,9 +12,23 @@
         <p>Experience : {{hero['exp']}} Exp</p>
         <p>Rarity : Tier {{hero['generation']}} </p>
     </div>
-
 </div>
 <div style="width: 600px; margin: auto;">
-    <h4>Available Rolls : ({{rollsBalance}})</h4>
-    <button *ngIf="rollsBalance>0" (click)="rollForHero()" >Roll For Hero</button>
+    <h4>Available Hero Rolls : ({{heroRollsBalance}})</h4>
+    <button *ngIf="heroRollsBalance>0" (click)="rollForHero()" >Roll For Hero</button>
+    <!-- <button (click)="getclaimableTokens()" >Get Claimable tokens</button> -->
+</div>
+<div style="width: 800px; margin: auto">
+    <h4>My Artifacts : ({{myArtifacts ? myArtifacts.length : 0}})</h4>
+    <div style="width: 200px; display: inline-block;    padding: 10px; border: solid black 2px; border-radius: 8px;" *ngFor="let artifact of myArtifacts">
+        <p>Id : {{artifact['id']}}<p>
+        <p>DNA : {{artifact['dna']}}<p>
+        <p>Element : {{artifact['element']}}<p>
+        <p>Experience : {{artifact['exp']}} Exp</p>
+        <p>Rarity : Tier {{artifact['generation']}} </p>
+    </div>
+</div>
+<div style="width: 600px; margin: auto;">
+    <h4>Available Artifact Rolls : ({{artifactRollsBalance}})</h4>
+    <button *ngIf="artifactRollsBalance>0" (click)="rollForArtifact()" >Roll For Artifact</button>
 </div>

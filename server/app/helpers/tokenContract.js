@@ -1,5 +1,5 @@
 const Web3 = require('web3')
-const tokenArtifact = require('./../../../build/contracts/HeroPrimeToken.json');
+const tokenArtifact = require('./../../build/contracts/HeroPrimeToken.json');
 const Provider = require("@truffle/hdwallet-provider");
 
 const networkUrl = 'HTTP://127.0.0.1:7545';

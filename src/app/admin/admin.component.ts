@@ -14,6 +14,8 @@ export class AdminComponent implements OnInit {
   private nftContract : any;
   manager_address : any;
 
+  claim_url: any;
+
   
   constructor(private web3: Web3Service) {
     
@@ -56,6 +58,13 @@ export class AdminComponent implements OnInit {
   }
   setManagerInNFT(){
     this.nftContract.methods.setManager(this.manager_address)
+    .send({from: this.accountNumber})
+    .once('receipt', (receipt) => {
+      console.log('receipt', receipt)
+    });
+  }
+  setClaimUrlatManager(){
+    this.managerContract.methods.setClaimURL(this.claim_url)
     .send({from: this.accountNumber})
     .once('receipt', (receipt) => {
       console.log('receipt', receipt)

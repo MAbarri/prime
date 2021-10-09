@@ -3,6 +3,7 @@ import {Injectable} from '@angular/core';
 const ManagerArtifacts = require('../../../build/contracts/HeroPrimeManager.json');
 const TokenArtifacts = require('../../../build/contracts/HeroPrimeToken.json');
 const NFTArtifacts = require('../../../build/contracts/HeroPrimeNFT.json');
+const NFTArtifactArtifacts = require('../../../build/contracts/HeroPrimeArtifactNFT.json');
 
 declare var require: any;
 const Web3 = require('web3');
@@ -90,6 +91,20 @@ export class Web3Service {
           networkId = netId;
           const abi = NFTArtifacts.abi;
           const networkAddress = NFTArtifacts.networks[networkId].address;
+          const artifact = new web3.eth.Contract(abi, networkAddress);
+          resolve(artifact);
+        });
+    });
+  }
+  public getArtifactNFTContract() {
+    return new Promise((resolve) => {
+      const web3 = window.web3;
+      let networkId;
+      web3.eth.net.getId()
+        .then((netId: any) => {
+          networkId = netId;
+          const abi = NFTArtifactArtifacts.abi;
+          const networkAddress = NFTArtifactArtifacts.networks[networkId].address;
           const artifact = new web3.eth.Contract(abi, networkAddress);
           resolve(artifact);
         });

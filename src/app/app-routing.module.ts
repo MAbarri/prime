@@ -13,6 +13,7 @@ import {
 } from './service/auth-guard.service';
 
 const routes: Routes = [
+  { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuard]  },
   { path: 'arena', component: ArenaComponent, canActivate: [AuthGuard]  },

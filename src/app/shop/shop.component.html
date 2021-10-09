@@ -1,10 +1,17 @@
 
 <div style="width: 600px; margin: auto;">
-    <h4>Available Rolls : ({{rollsBalance}})</h4>
+    <h4>Available Hero Rolls : ({{heroRollsBalance}})</h4>
+    <h4>Available Artifact Rolls : ({{artifactRollsBalance}})</h4>
 </div>
 <div style="width: 600px; margin: auto;">
     <h4>Buy Hero Prime Rolls :</h4>
     <input *ngIf="managerApproved" [(ngModel)]="rollsamount" type="number">
     <button *ngIf="!managerApproved" (click)="approveManager()" >Approve</button>
-    <button *ngIf="managerApproved" (click)="buyRolls()" >Buy Rolls</button>
+    <button *ngIf="managerApproved" (click)="buyHeroRolls()" >Buy Rolls</button>
+</div>
+<div style="width: 600px; margin: auto;">
+    <h4>Buy Artifacts Rolls :</h4>
+    <input *ngIf="managerApproved" [(ngModel)]="artifactrollsamount" type="number">
+    <button *ngIf="!managerApproved" (click)="approveManager()" >Approve</button>
+    <button *ngIf="managerApproved" (click)="buyArtifactRolls()" >Buy Rolls</button>
 </div>

@@ -14,15 +14,19 @@ export class InventoryComponent implements OnInit {
 
   managerApproved = false;
 
-  rollsBalance: any;
-  rollsamount: any;
+  heroRollsBalance: any;
+  artifactRollsBalance: any;
+  
   private managerContract : any;
   private tokenContract : any;
   private nftContract : any;
+  private artifactnftContract : any;
   manager_address : any;
 
   myHeroesIndexes : any;
+  myArtifactsIndexes : any;
   myHeroes : any;
+  myArtifacts : any;
 
   player: any;
 
@@ -45,7 +49,15 @@ export class InventoryComponent implements OnInit {
                   if (contractRes) {
                     this.nftContract = contractRes;
                     this.getHeros();
-                    this.getRolls();
+                    this.getHeroRolls();
+                  }
+                });
+              this.web3.getArtifactNFTContract()
+                .then((contractRes: any) => {
+                  if (contractRes) {
+                    this.artifactnftContract = contractRes;
+                    this.getArtifacts();
+                    this.getArtifactRolls();
                   }
                 });
               this.web3.getManagerContract()
@@ -68,11 +80,25 @@ export class InventoryComponent implements OnInit {
 
   ngOnInit() {
   }
-  getRolls(){
+  getHeroRolls(){
     this.nftContract.methods.getOwnerHeroPrimeRolls(this.accountNumber)
     .call()
     .then(value => {
-      this.rollsBalance = value;
+      this.heroRollsBalance = value;
+    });
+  }
+  getArtifactRolls(){
+    this.artifactnftContract.methods.getOwnerArtifactRolls(this.accountNumber)
+    .call()
+    .then(value => {
+      this.artifactRollsBalance = value;
+    });
+  }
+  getclaimableTokens(){
+    this.managerContract.methods.readClaimableTokens(this.accountNumber)
+    .call()
+    .then(value => {
+      console.log('_________ my flouss', value)
     });
   }
   getHeros(){
@@ -85,6 +111,19 @@ export class InventoryComponent implements OnInit {
       .then(value => {
         console.log("this.myHeroes", value)
         this.myHeroes = value;
+      });
+    });
+  }
+  getArtifacts(){
+    this.artifactnftContract.methods.getOwnerTokens(this.accountNumber)
+    .call()
+    .then(value => {
+      this.myArtifactsIndexes = value;
+      this.artifactnftContract.methods.getArtifacts(this.myArtifactsIndexes)
+      .call()
+      .then(value => {
+        console.log("this.myArtifacts", value)
+        this.myArtifacts = value;
       });
     });
   }
@@ -106,23 +145,24 @@ export class InventoryComponent implements OnInit {
       this.checkApproved();
     });
   }
-  buyRolls(){
 
-    this.managerContract.methods.buyHeroRolls(this.rollsamount)
-    .send({from: this.accountNumber})
-    .once('receipt', (receipt) => {
-      console.log('receipt', receipt)
-      this.getRolls()
-    });
-  }
   rollForHero(){
-    
     this.managerContract.methods.rollForHero(1, 1)
     .send({from: this.accountNumber})
     .once('receipt', (receipt) => {
       console.log('receipt', receipt)
       this.getHeros()
-      this.getRolls()
+      this.getHeroRolls()
+    });
+  }
+
+  rollForArtifact(){
+    this.managerContract.methods.rollForArtifact(1, 1)
+    .send({from: this.accountNumber})
+    .once('receipt', (receipt) => {
+      console.log('receipt', receipt)
+      this.getArtifacts()
+      this.getArtifactRolls()
     });
   }
 
@@ -135,16 +175,19 @@ export class InventoryComponent implements OnInit {
   }
 
   claimTokens(){
-    this.playerService.claimTokens(this.accountNumber).subscribe(function(response){
-      console.log('tokens Claimed', response)
-    })
-  }
-
-  generation(){    
-    this.managerContract.methods.generation("rarity", 8)
-    .call()
-    .then(value => {
-      console.log('value random', value)
+    this.managerContract.methods.claimRewards("0xa6B3C61fAeB749169FAF6B06D49E151969B508a1","209e4e4ede6f4b0faa41c3f44d176e70")
+    .send({from: this.accountNumber})
+    .once('receipt', (receipt) => {
+      console.log('receipt', receipt)
     });
   }
+
+  executeClaimTokens(){
+    this.managerContract.methods.executeClaimTokens()
+    .send({from: this.accountNumber})
+    .once('receipt', (receipt) => {
+      console.log('receipt', receipt)
+    });
+  }
+
 }

@@ -1,0 +1,113 @@
+{
+  "contractName": "IHeroPrimeToken",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/IHeroPrimeToken.sol\":\"IHeroPrimeToken\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/IHeroPrimeToken.sol\":{\"keccak256\":\"0x3b0874c28bde9fb28dd95aa41294aa2b64c772fc0a0e10c12ebe808fe8903075\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://1d84d30503308d66801d2264dfe5f1d10924abe8df370764ac88af9b8c9110bd\",\"dweb:/ipfs/QmYJLJdY8sroBqurScdCoMEim2HTH7pFsVvqEd25m8yF26\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: UNLICENSED\r\npragma solidity ^0.8.0;\r\n\r\ninterface IHeroPrimeToken {\r\n\r\n}",
+  "sourcePath": "C:\\workspace\\Personal\\truffle\\HeroPrime\\contracts\\IHeroPrimeToken.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/IHeroPrimeToken.sol",
+    "exportedSymbols": {
+      "IHeroPrimeToken": [
+        6970
+      ]
+    },
+    "id": 6971,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6969,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "40:23:27"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 6970,
+        "linearizedBaseContracts": [
+          6970
+        ],
+        "name": "IHeroPrimeToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 6971,
+        "src": "67:32:27"
+      }
+    ],
+    "src": "40:59:27"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/IHeroPrimeToken.sol",
+    "exportedSymbols": {
+      "IHeroPrimeToken": [
+        6970
+      ]
+    },
+    "id": 6971,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6969,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "40:23:27"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 6970,
+        "linearizedBaseContracts": [
+          6970
+        ],
+        "name": "IHeroPrimeToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 6971,
+        "src": "67:32:27"
+      }
+    ],
+    "src": "40:59:27"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-10-08T11:32:43.808Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

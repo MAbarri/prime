@@ -12,11 +12,14 @@ export class ShopComponent implements OnInit {
   tokenBalance: any;
 
   managerApproved = false;
-  rollsBalance: any;
+  heroRollsBalance: any;
+  artifactRollsBalance: any;
   rollsamount: any;
+  artifactrollsamount: any;
   private managerContract : any;
   private tokenContract : any;
   private nftContract : any;
+  private artifactnftContract : any;
   manager_address : any;
 
   
@@ -39,7 +42,14 @@ export class ShopComponent implements OnInit {
                 .then((contractRes: any) => {
                   if (contractRes) {
                     this.nftContract = contractRes;
-                    this.getRolls();
+                    this.getHeroRolls();
+                  }
+                });
+              this.web3.getArtifactNFTContract()
+                .then((contractRes: any) => {
+                  if (contractRes) {
+                    this.artifactnftContract = contractRes;
+                    this.getArtifactRolls();
                   }
                 });
               this.web3.getManagerContract()
@@ -66,12 +76,19 @@ export class ShopComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  getRolls(){
-    
+  getHeroRolls(){
     this.nftContract.methods.getOwnerHeroPrimeRolls(this.accountNumber)
     .call()
     .then(value => {
-      this.rollsBalance = value;
+      this.heroRollsBalance = value;
+    });
+  }
+
+  getArtifactRolls(){
+    this.artifactnftContract.methods.getOwnerArtifactRolls(this.accountNumber)
+    .call()
+    .then(value => {
+      this.artifactRollsBalance = value;
     });
   }
   checkApproved(){
@@ -90,13 +107,20 @@ export class ShopComponent implements OnInit {
       this.checkApproved();
     });
   }
-  buyRolls(){
-
+  buyHeroRolls(){
     this.managerContract.methods.buyHeroRolls(this.rollsamount)
     .send({from: this.accountNumber})
     .once('receipt', (receipt) => {
       console.log('receipt', receipt)
-      this.getRolls();
+      this.getHeroRolls();
+    });
+  }
+  buyArtifactRolls(){
+    this.managerContract.methods.buyArtifactRolls(this.artifactrollsamount)
+    .send({from: this.accountNumber})
+    .once('receipt', (receipt) => {
+      console.log('receipt', receipt)
+      this.getArtifactRolls();
     });
   }
 }

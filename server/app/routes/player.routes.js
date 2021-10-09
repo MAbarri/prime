@@ -11,7 +11,7 @@ module.exports = app => {
     router.get("/byAddress/:address", auth, players.getByAddress);
   
     // Create a new Tutorial
-    router.get("/claimTokens/:address", auth, players.claimTokens);
+    router.get("/claimTokens/:address", players.claimTokens);
   
     app.use("/api/players", router);
   };

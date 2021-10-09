@@ -1,3 +1,8 @@
+<!-- for dev: proxy http://localhost:4000/ -->
+<!-- for prod: proxy https://back-prime-server.herokuapp.com/ -->
+
+
+
 # MarketBlockChain
 
 # Ethereum Decentralized application
